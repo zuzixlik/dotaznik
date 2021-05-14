@@ -1,11 +1,11 @@
 import React from 'react';
-import Smiley from '../Smiley/index';
+import Icon from '../Icon/index';
 import './style.css';
 
-const Option = ({ type, text }) => (
+const Option = (props) => (
   <div className="option">
-    <Smiley type={type} />
-    <div>{text}</div>
+    <Icon type={props.type} />
+    <div>{props.text}</div>
   </div>
 );
 

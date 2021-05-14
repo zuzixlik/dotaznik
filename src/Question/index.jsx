@@ -1,23 +1,21 @@
 import React from 'react';
+import QuestionBody from '../QuestionBody/index';
 import Option from '../Option/index';
 import './style.css';
 
-const Question = ({ text }) => (
+const Question = (props) => (
   <div className="question">
-    <p className="question__text">
-      {text}
-    </p>
-    <div className="question__answer">
-      Zodpovězeno
-    </div>
+    <QuestionBody 
+      iconType="symbolQuestion" 
+      text="Kdo jinému jámu kopá, sám do ní padá"
+    />
     <div className="question__options">
-      <Option type="strongYes" text="Souhlasím"/>
-      <Option type="yes" text="Spíše souhlasím"/>
-      <Option type="neutral" text="Nevím"/>
-      <Option type="no" text="Spíše nesouhlasím"/>
-      <Option type="strongNo" text="Nesouhlasím"/>
+      <Option type="smileyStrongYes" text="Souhlasím"/>
+      <Option type="smileyYes" text="Spíše souhlasím"/>
+      <Option type="smileyNeutral" text="Nevím"/>
+      <Option type="smileyNo" text="Spíše nesouhlasím"/>
+      <Option type="smileyStrongNo" text="Nesouhlasím"/>
     </div>
-    
   </div>
 );
 
