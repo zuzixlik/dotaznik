@@ -4,9 +4,7 @@ import './style.css';
 
 const QuestionBody = (props) => (
   <div className="question__body">
-    <p className="question__text">
-      {props.text}
-    </p>
+    <p className="question__text">{props.text}</p>
     <Icon type={props.iconType} />
   </div>
 );

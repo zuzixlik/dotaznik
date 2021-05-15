@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState, onClick } from 'react';
 import Icon from '../Icon/index';
 import './style.css';
 
 const Option = (props) => (
-  <div className="option">
+  <div
+    onClick={() => {
+      console.log(props.text);
+      props.onSelected();
+    }}
+    className="option"
+  >
     <Icon type={props.type} />
     <div>{props.text}</div>
   </div>
